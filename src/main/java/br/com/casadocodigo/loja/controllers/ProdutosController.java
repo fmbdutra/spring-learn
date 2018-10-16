@@ -39,7 +39,7 @@ public class ProdutosController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
-	public ModelAndView gravar(@Valid Produto produto,  BindingResult result, RedirectAttributes redirectAttributes) {
+	public ModelAndView gravar(@Valid Produto produto, BindingResult result, RedirectAttributes redirectAttributes) {
 
 		if (result.hasErrors()) {
 			return form(produto);
