@@ -14,7 +14,7 @@
 </head>
 <body>
 	<h1>CADASTRO DE PRODUTOS</h1>
-	<form:form action="${s:mvcUrl('PC#gravar').build()}" method="POST" commandName="produto">
+	<form:form action="${s:mvcUrl('PC#gravar').build()}" method="POST" commandName="produto" enctype="multipart/form-data">
 		<table>
 			<tr>
 				<div>
@@ -55,6 +55,11 @@
 					</div>
 				</tr>
 			</c:forEach>
+			
+			<tr>
+			<td><label>Sumário</label></td>
+			<td><input type="file" name="sumario"></td>
+			</tr>
 		</table>
 		</br>
 		<button type="submit">Cadastrar</button>
